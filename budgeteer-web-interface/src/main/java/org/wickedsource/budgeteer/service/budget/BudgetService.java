@@ -285,7 +285,7 @@ public class BudgetService {
      * @return a list containing all available budget units, one of which is currently active.
      */
     public List<Double> loadBudgetUnits(long projectId) {
-        List<Double> units = new ArrayList<Double>();
+        List<Double> units = new ArrayList<>();
         units.add(1d);
         List<Money> rates = rateRepository.getDistinctRatesInCents(projectId);
         for (Money rate : rates) {
@@ -295,11 +295,11 @@ public class BudgetService {
     }
 
     public void deleteBudget(long id) {
-        budgetRepository.delete(id);
+        budgetRepository.deleteById(id);
     }
 
     public List<BudgetDetailData> loadBudgetByContract(long cId){
-        List<BudgetDetailData> result = new LinkedList<BudgetDetailData>();
+        List<BudgetDetailData> result = new LinkedList<>();
         List<BudgetEntity> temp =budgetRepository.findByContractId(cId);
         if(temp != null){
             for(BudgetEntity b : temp){

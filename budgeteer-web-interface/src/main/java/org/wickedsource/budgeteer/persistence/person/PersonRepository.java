@@ -29,4 +29,8 @@ public interface PersonRepository extends CrudRepository<PersonEntity, Long> {
 
     @Query("select new org.wickedsource.budgeteer.persistence.person.PersonBaseDataBean(p.id, p.name, sum(r.minutes * r.dailyRate) / sum(r.minutes), max(r.date)) from PersonEntity p left join p.workRecords r where r.budget.id = :budgetId group by p.id, p.name order by p.name")
     List<PersonBaseDataBean> findBaseDataByBudgetId(@Param("budgetId") long budgetId);
+
+    default PersonEntity findOne(long personId){
+        return findById(personId).orElse(null);
+    }
 }

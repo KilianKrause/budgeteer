@@ -123,17 +123,17 @@ public class ContractService {
         for (BudgetEntity budgetEntity : budgets) {
             budgetEntity.setContract(null);
         }
-        budgetRepository.save(budgets);
+        budgetRepository.saveAll(budgets);
 
         invoiceRepository.deleteInvoiceFieldsByContractId(contractId);
         invoiceRepository.deleteInvoicesByContractId(contractId);
 
-        contractRepository.delete(contractId);
+        contractRepository.deleteById(contractId);
     }
     
     public List<Date> getMonthList(long contractId) {
-    	List<Date> months = new ArrayList<Date>();
-    	ContractEntity contract = contractRepository.findById(contractId);
+    	List<Date> months = new ArrayList<>();
+    	ContractEntity contract = contractRepository.findByInvoiceFieldsId(contractId);
     	Calendar cal = Calendar.getInstance();
     	cal.setTime(contract.getStartDate());
     	Calendar currentDate = Calendar.getInstance();

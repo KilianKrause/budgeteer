@@ -7,7 +7,6 @@ buildscript {
 
     dependencies {
         classpath group: 'org.springframework.boot', name: 'spring-boot-gradle-plugin', version: "${spring_boot_version}"
-        classpath group: 'org.springframework', name: 'springloaded', version: "${springloaded_version}"
     }
 }
 
@@ -61,6 +60,7 @@ dependencies {
 
     compile group: 'org.springframework', name: 'spring-webmvc', version: "${spring_version}"
     compile(
+            [group: 'javax.servlet', name: 'javax.servlet-api', version: '3.1.0'],
             [group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: "${spring_boot_version}"],
             [group: 'org.springframework.boot', name: 'spring-boot-starter-logging', version: "${spring_boot_version}"],
             [group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: "${spring_boot_version}"],
@@ -103,7 +103,7 @@ dependencies {
             [group: 'org.dbunit', name: 'dbunit', version: "${dbunit_version}"],
     )
 
-    testCompile "org.springframework.boot:spring-boot-starter-test"
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: "${spring_boot_version}"
     testCompile('org.junit.platform:junit-platform-launcher:1.0.3')
     testCompile('com.github.sbrannen:spring-test-junit5:1.0.3')
 

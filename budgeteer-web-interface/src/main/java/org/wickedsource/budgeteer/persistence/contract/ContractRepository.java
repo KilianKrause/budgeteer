@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
+import org.wickedsource.budgeteer.persistence.budget.BudgetEntity;
 
 import java.util.List;
 
@@ -77,7 +78,7 @@ public interface ContractRepository extends CrudRepository<ContractEntity, Long>
     void deleteByProjectId(@Param(value = "projectId") long projectId);
 
     @Query("select c from ContractEntity c join fetch c.invoiceFields where c.id = :id")
-    ContractEntity findById(@Param("id") long id);
+    ContractEntity findByInvoiceFieldsId(@Param("id") long id);
 
     @Modifying
     @Query("delete from ContractFieldEntity c where c.id in (select s.id from ContractFieldEntity s where  s.field.project.id = :projectId)")
@@ -94,4 +95,7 @@ public interface ContractRepository extends CrudRepository<ContractEntity, Long>
     		+ "from WorkRecordEntity wr where wr.budget.contract.id = :contractId")
 	Double getSpentBudgetGrossByContractId(@Param("contractId") Long contractId);
 
+    default ContractEntity findOne(long contractId){
+        return findById(contractId).orElse(null);
+    }
 }
