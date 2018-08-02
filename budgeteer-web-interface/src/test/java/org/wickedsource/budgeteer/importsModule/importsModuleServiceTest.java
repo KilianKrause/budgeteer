@@ -3,22 +3,17 @@ package org.wickedsource.budgeteer.importsModule;
 import de.olivergierke.moduliths.model.test.ModuleTest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.wickedsource.budgeteer.importsModule.internal.persistence.ImportEntity;
 import org.wickedsource.budgeteer.importsModule.internal.service.Import;
 import org.wickedsource.budgeteer.persistence.record.WorkRecordRepository;
 import org.wickedsource.budgeteer.service.ServiceTestTemplate;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 @ModuleTest(mode = ModuleTest.BootstrapMode.ALL_DEPENDENCIES)
 public class importsModuleServiceTest extends ServiceTestTemplate {
