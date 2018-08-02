@@ -1,4 +1,4 @@
-package org.wickedsource.budgeteer.web.pages.imports.fileimport;
+package org.wickedsource.budgeteer.importsModule.web.fileimport;
 
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;

@@ -1,6 +1,7 @@
 package org.wickedsource.budgeteer.web;
 
 import de.adesso.wickedcharts.wicket7.JavaScriptResourceRegistry;
+import de.olivergierke.moduliths.Modulith;
 import org.apache.wicket.RuntimeConfigurationType;
 import org.apache.wicket.Session;
 import org.apache.wicket.markup.head.IHeaderResponse;
@@ -27,6 +28,7 @@ import org.wickedsource.budgeteer.web.pages.dashboard.DashboardPage;
 import java.util.Set;
 
 @Component
+@Modulith
 public class BudgeteerApplication extends WebApplication implements ApplicationContextAware {
 
     private ApplicationContext context;

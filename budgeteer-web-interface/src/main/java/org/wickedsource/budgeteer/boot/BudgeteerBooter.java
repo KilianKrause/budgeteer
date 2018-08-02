@@ -10,13 +10,11 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 // excluding configurations since they are not compatible with libraries within the application
 @EnableAutoConfiguration(exclude = {JacksonAutoConfiguration.class, MultipartAutoConfiguration.class})
-@EnableJpaRepositories("org.wickedsource.budgeteer.persistence")
-@EntityScan("org.wickedsource.budgeteer.persistence")
+@EnableJpaRepositories("org.wickedsource.budgeteer")
+@EntityScan("org.wickedsource.budgeteer")
 @ComponentScan("org.wickedsource.budgeteer")
 public class BudgeteerBooter {
-
     public static void main(String[] args) {
         SpringApplication.run(BudgeteerBooter.class, args);
     }
-
 }

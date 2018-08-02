@@ -1,4 +1,4 @@
-package org.wickedsource.budgeteer.service.imports;
+package org.wickedsource.budgeteer.importsModule.service;
 
 
 import org.junit.jupiter.api.Assertions;

@@ -1,4 +1,4 @@
-package org.wickedsource.budgeteer.web.pages.imports.fileimport;
+package org.wickedsource.budgeteer.importsModule.internal.web.fileimport;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.wicket.model.AbstractReadOnlyModel;

@@ -1,4 +1,4 @@
-package org.wickedsource.budgeteer.web.pages.imports.fileimport;
+package org.wickedsource.budgeteer.importsModule.internal.web.fileimport;
 
 import org.apache.wicket.markup.html.form.upload.FileUpload;
 import org.wickedsource.budgeteer.imports.api.Importer;

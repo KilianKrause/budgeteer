@@ -4,7 +4,7 @@ import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 import org.wickedsource.budgeteer.service.notification.*;
 import org.wickedsource.budgeteer.web.pages.budgets.edit.EditBudgetPage;
-import org.wickedsource.budgeteer.web.pages.imports.fileimport.ImportFilesPage;
+import org.wickedsource.budgeteer.importsModule.internal.web.fileimport.ImportFilesPage;
 import org.wickedsource.budgeteer.web.pages.person.edit.EditPersonPage;
 
 import java.io.Serializable;

@@ -1,4 +1,4 @@
-package org.wickedsource.budgeteer.web.pages.imports.fileimport;
+package org.wickedsource.budgeteer.importsModule.internal.web.fileimport;
 
 import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.xssf.usermodel.XSSFCell;

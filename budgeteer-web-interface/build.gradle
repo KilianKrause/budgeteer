@@ -3,6 +3,9 @@ import org.apache.tools.ant.filters.ReplaceTokens
 buildscript {
     repositories {
         jcenter()
+        maven {
+            url 'https://repo.spring.io/libs-snapshot'
+        }
     }
 
     dependencies {
@@ -52,6 +55,15 @@ dependencies {
     compile project(':budgeteer-ubw-importer')
     compile project(':budgeteer-resourceplan-importer')
     compile project(':budgeteer-report-exporter')
+
+    compile(
+            [group: 'de.olivergierke.moduliths', name: 'moduliths-core', version: "1.0.0-SNAPSHOT"],
+            [group: 'de.olivergierke.moduliths', name: 'moduliths-test', version: "1.0.0-SNAPSHOT"]
+    )
+
+    testCompile(
+            [group: 'de.olivergierke.moduliths', name: 'moduliths-test', version: "1.0.0-SNAPSHOT"]
+    )
 
     compile(
             [group: 'org.apache.wicket', name: 'wicket-spring', version: "${wicket_spring_version}"],

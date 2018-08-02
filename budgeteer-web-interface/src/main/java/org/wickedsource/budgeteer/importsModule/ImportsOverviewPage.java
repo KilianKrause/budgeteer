@@ -1,4 +1,4 @@
-package org.wickedsource.budgeteer.web.pages.imports;
+package org.wickedsource.budgeteer.importsModule;
 
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.AjaxLink;
@@ -9,15 +9,15 @@ import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.spring.injection.annot.SpringBean;
-import org.wickedsource.budgeteer.service.imports.Import;
-import org.wickedsource.budgeteer.service.imports.ImportService;
+import org.wickedsource.budgeteer.importsModule.internal.service.Import;
+import org.wickedsource.budgeteer.importsModule.internal.web.ImportsModel;
 import org.wickedsource.budgeteer.web.BudgeteerSession;
 import org.wickedsource.budgeteer.web.ClassAwareWrappingModel;
 import org.wickedsource.budgeteer.web.Mount;
 import org.wickedsource.budgeteer.web.pages.base.basepage.BasePage;
 import org.wickedsource.budgeteer.web.pages.base.basepage.breadcrumbs.BreadcrumbsModel;
 import org.wickedsource.budgeteer.web.pages.dashboard.DashboardPage;
-import org.wickedsource.budgeteer.web.pages.imports.fileimport.ImportFilesPage;
+import org.wickedsource.budgeteer.importsModule.internal.web.fileimport.ImportFilesPage;
 
 import java.util.List;
 

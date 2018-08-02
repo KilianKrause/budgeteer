@@ -1,4 +1,4 @@
-package org.wickedsource.budgeteer.service.imports;
+package org.wickedsource.budgeteer.importsModule.internal.service;
 
 import lombok.Getter;
 import lombok.Setter;

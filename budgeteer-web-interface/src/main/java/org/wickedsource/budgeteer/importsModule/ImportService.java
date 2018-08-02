@@ -1,4 +1,4 @@
-package org.wickedsource.budgeteer.service.imports;
+package org.wickedsource.budgeteer.importsModule;
 
 import lombok.Getter;
 import org.springframework.beans.BeansException;
@@ -8,8 +8,11 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Service;
 import org.wickedsource.budgeteer.MoneyUtil;
 import org.wickedsource.budgeteer.imports.api.*;
-import org.wickedsource.budgeteer.importsModule.internal.ImportEntity;
-import org.wickedsource.budgeteer.importsModule.internal.ImportRepository;
+import org.wickedsource.budgeteer.importsModule.internal.persistence.ImportEntity;
+import org.wickedsource.budgeteer.importsModule.internal.service.Import;
+import org.wickedsource.budgeteer.importsModule.internal.service.ImporterRegistry;
+import org.wickedsource.budgeteer.importsModule.internal.service.PlanRecordDatabaseImporter;
+import org.wickedsource.budgeteer.importsModule.internal.service.WorkRecordDatabaseImporter;
 import org.wickedsource.budgeteer.persistence.record.PlanRecordRepository;
 import org.wickedsource.budgeteer.persistence.record.WorkRecordRepository;
 
@@ -68,7 +71,7 @@ public class ImportService implements ApplicationContextAware {
     public void deleteImport(long importId) {
         workRecordRepository.deleteByImport(importId);
         planRecordRepository.deleteByImport(importId);
-        importRepository.deleteById(importId);
+        importRepository.delete(importId);
     }
 
     /**

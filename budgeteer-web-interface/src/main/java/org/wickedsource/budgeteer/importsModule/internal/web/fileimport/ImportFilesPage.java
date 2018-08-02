@@ -1,4 +1,4 @@
-package org.wickedsource.budgeteer.web.pages.imports.fileimport;
+package org.wickedsource.budgeteer.importsModule.internal.web.fileimport;
 
 import org.apache.wicket.AttributeModifier;
 import org.apache.wicket.ajax.AjaxEventBehavior;
@@ -25,7 +25,7 @@ import org.apache.wicket.util.time.Duration;
 import org.wickedsource.budgeteer.importer.aproda.AprodaWorkRecordsImporter;
 import org.wickedsource.budgeteer.importer.ubw.UBWWorkRecordsImporter;
 import org.wickedsource.budgeteer.imports.api.*;
-import org.wickedsource.budgeteer.service.imports.ImportService;
+import org.wickedsource.budgeteer.importsModule.ImportService;
 import org.wickedsource.budgeteer.web.BudgeteerSession;
 import org.wickedsource.budgeteer.web.ClassAwareWrappingModel;
 import org.wickedsource.budgeteer.web.Mount;

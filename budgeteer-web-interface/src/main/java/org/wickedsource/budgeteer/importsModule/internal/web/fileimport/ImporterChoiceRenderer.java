@@ -1,4 +1,4 @@
-package org.wickedsource.budgeteer.web.pages.imports.fileimport;
+package org.wickedsource.budgeteer.importsModule.internal.web.fileimport;
 
 import org.wickedsource.budgeteer.imports.api.Importer;
 import org.wickedsource.budgeteer.web.pages.base.AbstractChoiceRenderer;

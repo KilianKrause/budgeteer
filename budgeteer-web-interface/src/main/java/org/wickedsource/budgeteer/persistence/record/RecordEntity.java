@@ -5,7 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.joda.money.Money;
 import org.wickedsource.budgeteer.persistence.budget.BudgetEntity;
-import org.wickedsource.budgeteer.persistence.imports.ImportEntity;
+import org.wickedsource.budgeteer.importsModule.internal.persistence.ImportEntity;
 import org.wickedsource.budgeteer.persistence.person.PersonEntity;
 
 import javax.persistence.*;

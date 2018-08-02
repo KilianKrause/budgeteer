@@ -1,4 +1,4 @@
-package org.wickedsource.budgeteer.service.imports;
+package org.wickedsource.budgeteer.importsModule.internal.service;
 
 import org.springframework.stereotype.Component;
 import org.wickedsource.budgeteer.imports.api.PlanRecordsImporter;

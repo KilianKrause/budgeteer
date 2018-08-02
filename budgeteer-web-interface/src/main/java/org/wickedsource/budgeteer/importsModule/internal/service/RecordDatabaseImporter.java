@@ -1,11 +1,11 @@
-package org.wickedsource.budgeteer.service.imports;
+package org.wickedsource.budgeteer.importsModule.internal.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.wickedsource.budgeteer.MoneyUtil;
 import org.wickedsource.budgeteer.persistence.budget.BudgetEntity;
 import org.wickedsource.budgeteer.persistence.budget.BudgetRepository;
-import org.wickedsource.budgeteer.importsModule.internal.ImportEntity;
-import org.wickedsource.budgeteer.importsModule.internal.ImportRepository;
+import org.wickedsource.budgeteer.importsModule.internal.persistence.ImportEntity;
+import org.wickedsource.budgeteer.importsModule.ImportRepository;
 import org.wickedsource.budgeteer.persistence.person.PersonEntity;
 import org.wickedsource.budgeteer.persistence.person.PersonRepository;
 import org.wickedsource.budgeteer.persistence.project.ProjectEntity;

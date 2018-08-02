@@ -14,7 +14,7 @@
 
     <mockito:mock id="aggregationService" class="org.wickedsource.budgeteer.service.record.RecordService"/>
 
-    <mockito:mock id="importsService" class="org.wickedsource.budgeteer.service.imports.ImportService"/>
+    <mockito:mock id="importsService" class="org.wickedsource.budgeteer.importsModule.ImportService"/>
 
     <mockito:mock id="exportService" class="org.wickedsource.budgeteer.service.exports.ExportService"/>
 

@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.wickedsource.budgeteer.MoneyUtil;
 import org.wickedsource.budgeteer.persistence.budget.BudgetEntity;
-import org.wickedsource.budgeteer.persistence.imports.ImportEntity;
+import org.wickedsource.budgeteer.importsModule.internal.persistence.ImportEntity;
 import org.wickedsource.budgeteer.persistence.person.PersonEntity;
 import org.wickedsource.budgeteer.persistence.record.MonthlyAggregatedRecordBean;
 import org.wickedsource.budgeteer.persistence.record.WeeklyAggregatedRecordBean;

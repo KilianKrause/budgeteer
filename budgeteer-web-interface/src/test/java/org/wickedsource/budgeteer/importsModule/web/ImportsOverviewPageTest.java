@@ -1,4 +1,4 @@
-package org.wickedsource.budgeteer.web.pages.imports;
+package org.wickedsource.budgeteer.importsModule.web;
 
 import org.apache.wicket.util.tester.WicketTester;
 import org.junit.jupiter.api.Test;

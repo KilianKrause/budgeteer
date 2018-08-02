@@ -1,10 +1,10 @@
-package org.wickedsource.budgeteer.web.pages.imports.fileimport;
+package org.wickedsource.budgeteer.importsModule.internal.web.fileimport;
 
 import org.apache.wicket.injection.Injector;
 import org.apache.wicket.model.AbstractReadOnlyModel;
 import org.apache.wicket.spring.injection.annot.SpringBean;
 import org.wickedsource.budgeteer.imports.api.Importer;
-import org.wickedsource.budgeteer.service.imports.ImportService;
+import org.wickedsource.budgeteer.importsModule.ImportService;
 
 import java.util.List;
 
