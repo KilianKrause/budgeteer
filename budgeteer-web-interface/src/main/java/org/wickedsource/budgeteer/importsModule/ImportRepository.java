@@ -1,4 +1,4 @@
-package org.wickedsource.budgeteer.persistence.imports;
+package org.wickedsource.budgeteer.importsModule.internal;
 
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

@@ -2,6 +2,7 @@ package org.wickedsource.budgeteer.web.pages.imports;
 
 import org.apache.wicket.util.tester.WicketTester;
 import org.junit.jupiter.api.Test;
+import org.wickedsource.budgeteer.importsModule.ImportsOverviewPage;
 import org.wickedsource.budgeteer.web.AbstractWebTestTemplate;
 
 public class ImportsOverviewPageTest extends AbstractWebTestTemplate {

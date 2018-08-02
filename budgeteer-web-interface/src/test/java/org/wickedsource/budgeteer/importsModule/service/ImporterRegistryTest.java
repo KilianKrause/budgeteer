@@ -3,6 +3,7 @@ package org.wickedsource.budgeteer.service.imports;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.wickedsource.budgeteer.importsModule.internal.service.ImporterRegistry;
 
 class ImporterRegistryTest {
 

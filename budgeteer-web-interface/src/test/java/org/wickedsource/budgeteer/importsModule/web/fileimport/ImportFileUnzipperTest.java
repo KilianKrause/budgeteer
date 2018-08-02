@@ -3,6 +3,7 @@ package org.wickedsource.budgeteer.web.pages.imports.fileimport;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import org.wickedsource.budgeteer.imports.api.ImportFile;
+import org.wickedsource.budgeteer.importsModule.internal.web.fileimport.ImportFileUnzipper;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -3,8 +3,10 @@ package org.wickedsource.budgeteer.service.imports;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.wickedsource.budgeteer.persistence.imports.ImportEntity;
-import org.wickedsource.budgeteer.persistence.imports.ImportRepository;
+import org.wickedsource.budgeteer.importsModule.internal.persistence.ImportEntity;
+import org.wickedsource.budgeteer.importsModule.ImportRepository;
+import org.wickedsource.budgeteer.importsModule.internal.service.Import;
+import org.wickedsource.budgeteer.importsModule.ImportService;
 import org.wickedsource.budgeteer.persistence.record.WorkRecordRepository;
 import org.wickedsource.budgeteer.service.ServiceTestTemplate;
 
@@ -48,5 +50,4 @@ class ImportServiceTest extends ServiceTestTemplate {
         entity.setId(1L);
         return entity;
     }
-
 }

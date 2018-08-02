@@ -8,8 +8,8 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Service;
 import org.wickedsource.budgeteer.MoneyUtil;
 import org.wickedsource.budgeteer.imports.api.*;
-import org.wickedsource.budgeteer.persistence.imports.ImportEntity;
-import org.wickedsource.budgeteer.persistence.imports.ImportRepository;
+import org.wickedsource.budgeteer.importsModule.internal.ImportEntity;
+import org.wickedsource.budgeteer.importsModule.internal.ImportRepository;
 import org.wickedsource.budgeteer.persistence.record.PlanRecordRepository;
 import org.wickedsource.budgeteer.persistence.record.WorkRecordRepository;
 
@@ -68,7 +68,7 @@ public class ImportService implements ApplicationContextAware {
     public void deleteImport(long importId) {
         workRecordRepository.deleteByImport(importId);
         planRecordRepository.deleteByImport(importId);
-        importRepository.delete(importId);
+        importRepository.deleteById(importId);
     }
 
     /**
@@ -77,7 +77,7 @@ public class ImportService implements ApplicationContextAware {
      * @return all currently registered file importers.
      */
     public List<? extends Importer> getAvailableImporters() {
-        List<Importer> importers = new ArrayList<Importer>();
+        List<Importer> importers = new ArrayList<>();
         importers.addAll(importerRegistry.getWorkingRecordsImporters());
         importers.addAll(importerRegistry.getPlanRecordsImporters());
         return importers;

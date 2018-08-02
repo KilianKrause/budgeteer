@@ -1,4 +1,4 @@
-package org.wickedsource.budgeteer.persistence.imports;
+package org.wickedsource.budgeteer.importsModule.internal;
 
 import lombok.Data;
 import org.wickedsource.budgeteer.persistence.project.ProjectEntity;
