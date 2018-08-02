@@ -28,7 +28,6 @@ import org.wickedsource.budgeteer.web.pages.dashboard.DashboardPage;
 import java.util.Set;
 
 @Component
-@Modulith
 public class BudgeteerApplication extends WebApplication implements ApplicationContextAware {
 
     private ApplicationContext context;
