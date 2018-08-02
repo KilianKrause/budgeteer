@@ -3,6 +3,7 @@ package org.wickedsource.budgeteer.persistence.user;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
+import org.wickedsource.budgeteer.persistence.project.ProjectEntity;
 
 import java.util.List;
 
@@ -20,4 +21,7 @@ public interface UserRepository extends CrudRepository<UserEntity, Long> {
     @Query("select u from UserEntity u join u.authorizedProjects p where p.id = :projectId")
     public List<UserEntity> findInProject(@Param("projectId") long projectId);
 
+    default UserEntity findOne(long userId){
+        return findById(userId).orElse(null);
+    }
 }

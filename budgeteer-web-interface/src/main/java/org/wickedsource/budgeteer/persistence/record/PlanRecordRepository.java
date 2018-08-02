@@ -228,4 +228,7 @@ public interface PlanRecordRepository extends CrudRepository<PlanRecordEntity, L
     @Query("select pr from PlanRecordEntity pr where pr.budget.project.id = :projectId")
     List<PlanRecordEntity> findByProjectId(@Param("projectId") long projectId);
 
+    default PlanRecordEntity findOne(long l){
+        return findById(l).orElse(null);
+    }
 }

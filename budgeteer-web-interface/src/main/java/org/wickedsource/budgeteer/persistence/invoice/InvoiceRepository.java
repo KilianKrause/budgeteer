@@ -4,6 +4,7 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
+import org.wickedsource.budgeteer.persistence.contract.ContractEntity;
 
 import java.util.List;
 
@@ -37,4 +38,7 @@ public interface InvoiceRepository extends CrudRepository<InvoiceEntity, Long> {
     @Query("delete from InvoiceEntity cif where cif.contract.id  = :contractId")
     void deleteInvoicesByContractId(@Param("contractId") long contractId);
 
+    default InvoiceEntity findOne(long invoiceId){
+        return findById(invoiceId).orElse(null);
+    }
 }

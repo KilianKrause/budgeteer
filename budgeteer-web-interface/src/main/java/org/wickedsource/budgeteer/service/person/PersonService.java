@@ -93,7 +93,7 @@ public class PersonService {
         personEntity.setName(person.getName());
         personEntity.setImportKey(person.getImportKey());
 
-        List<DailyRateEntity> dailyRates = new ArrayList<DailyRateEntity>();
+        List<DailyRateEntity> dailyRates = new ArrayList<>();
         for (PersonRate rate : person.getRates()) {
             DailyRateEntity rateEntity = new DailyRateEntity();
             rateEntity.setRate(rate.getRate());
@@ -121,7 +121,7 @@ public class PersonService {
     }
 
     public void deletePerson(long personId) {
-        personRepository.delete(personId);
+        personRepository.deleteById(personId);
     }
 
     public List<PersonBaseData> loadPeopleBaseDataByBudget(long budgetId) {

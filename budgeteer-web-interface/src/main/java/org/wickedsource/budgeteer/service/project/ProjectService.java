@@ -131,7 +131,7 @@ public class ProjectService {
                 }
             }
         }
-        projectRepository.delete(projectId);
+        projectRepository.deleteById(projectId);
     }
 
     /**
