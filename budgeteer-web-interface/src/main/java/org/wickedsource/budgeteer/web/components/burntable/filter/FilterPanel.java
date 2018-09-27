@@ -71,7 +71,7 @@ public class FilterPanel extends Panel {
         List<PersonBaseData> possiblePersonsFromFilter = form.getModelObject().getPossiblePersons();
         List<PersonBaseData> possiblePersons = possiblePersonsFromFilter.isEmpty() ? personService.loadPeopleBaseData(BudgeteerSession.get().getProjectId()) : possiblePersonsFromFilter;
         ListMultipleChoice<PersonBaseData> selectedPersons =
-                new ListMultipleChoice<PersonBaseData>("personSelect", chosenPersons,
+                new ListMultipleChoice<>("personSelect", chosenPersons,
                         possiblePersons, new PersonBaseDataChoiceRenderer());
 
 

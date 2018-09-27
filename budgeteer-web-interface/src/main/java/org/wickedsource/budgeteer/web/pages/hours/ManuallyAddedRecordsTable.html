@@ -1,0 +1,39 @@
+<wicket:panel xmlns:wicket="http://www.w3.org/1999/xhtml">
+
+    <p class="pull-right"></p><br/>
+
+    <table class="table table-hover smallLastColumn" wicket:id="table">
+        <thead>
+        <tr>
+            <th>Budget</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Date</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr wicket:id="recordsList">
+            <td wicket:id="budget">Budget name</td>
+            <td wicket:id="name">Person name</td>
+            <td wicket:id="description">Record description</td>
+            <td wicket:id="amount">Record amount</td>
+            <td wicket:id="date">Record date</td>
+            <td>
+                <button class="btn btn-default btn-sm fa fa-edit" wicket:id="editPage"></button>
+            </td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <th>Budget</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Date</th>
+            <th></th>
+        </tr>
+        </tfoot>
+    </table>
+</wicket:panel>

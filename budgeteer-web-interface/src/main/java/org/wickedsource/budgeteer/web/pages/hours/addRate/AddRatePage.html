@@ -1,0 +1,70 @@
+<wicket:extend xmlns:wicket="http://www.w3.org/1999/xhtml">
+    <div class="form-box wide" id="login-box">
+        <div class="header">Add new Rates
+            <div class="box-tools pull-right">
+                <button wicket:id="cancelButton1" class="btn bg-olive btn-sm"><i class="fa fa-times"></i></button>
+            </div>
+        </div>
+        <div class="body bg-gray">
+
+            <!-- Add Rate Form -->
+            <form wicket:id="addRateForm" method="post">
+                <!--People dropdown-->
+                <div class="form-group">
+                    <label>Select People</label><br/>
+                    <select wicket:id="personSelect" class="form-control">
+                        <option>Tom Hombergs</option>
+                    </select>
+                </div>
+
+                <!--Budgets dropdown-->
+                <div class="form-group">
+                    <label>Select Budgets</label><br/>
+                    <select wicket:id="budgetList" class="form-control">
+                        <option>Tom Hombergs</option>
+                    </select>
+                </div>
+
+                <!--Description-->
+                <div class="form-group">
+                    <label for="descriptionInput">Description</label>
+                    <input wicket:id="description" type="text" maxlength="255" id="descriptionInput" class="form-control"/>
+                    <p class="help-block">A short description of the added rates.</p>
+                </div>
+
+                <!--Amount-->
+                <div class="form-group">
+                    <label for="amountInput">Amount</label>
+                    <input wicket:id="amount" type="text" maxlength="255" id="amountInput" class="form-control"/>
+                    <p class="help-block">The amount of the given rate</p>
+                </div>
+
+                <!--Amount-->
+                <div class="form-group">
+                    <label for="dateRangeInput">Date/Date range</label>
+                    <input wicket:id="dateRangeInput" type="text" maxlength="255" id="dateRangeInput" class="form-control"/>
+                    <p class="help-block">The date range for the the given rate (you can also select just one day)</p>
+                </div>
+
+            </form>
+        </div>
+
+        <!--Footer-->
+        <div class="footer" style="width: 100%;">
+            <div class="row">
+                <div class="col-lg-3">
+                    <button wicket:id="cancelButton2" id="cancel" type="button" class="btn bg-olive btn-block">
+                        Cancel
+                    </button>
+                </div>
+                <div class="col-lg-9">
+                    <button type="submit" id="submitButton"
+                            class="btn bg-olive btn-block">Save rate(s)
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/enterAndEscape.js"></script>
+</wicket:extend>

@@ -562,8 +562,8 @@ public class StatisticsService {
      */
     public TargetAndActual getWeekStatsForBudgetsWithTax(BudgetTagFilter budgetFilter, int numberOfWeeks) {
         Date startDate = dateUtil.weeksAgo(numberOfWeeks);
-        List<WeeklyAggregatedRecordWithTitleAndTaxBean> burnedStats = new ArrayList<WeeklyAggregatedRecordWithTitleAndTaxBean>();
-        List<WeeklyAggregatedRecordWithTaxBean> plannedStats = new ArrayList<WeeklyAggregatedRecordWithTaxBean>();
+        List<WeeklyAggregatedRecordWithTitleAndTaxBean> burnedStats;
+        List<WeeklyAggregatedRecordWithTaxBean> plannedStats;
 
         if (budgetFilter.getSelectedTags().isEmpty()) {
             burnedStats = workRecordRepository.aggregateByWeekAndPersonForBudgetsWithTax(budgetFilter.getProjectId(), startDate);
@@ -591,8 +591,8 @@ public class StatisticsService {
      */
     public TargetAndActual getMonthStatsForBudgets(BudgetTagFilter budgetFilter, int numberOfMonths) {
         Date startDate = dateUtil.monthsAgo(numberOfMonths);
-        List<MonthlyAggregatedRecordWithTitleBean> burnedStats = new ArrayList<MonthlyAggregatedRecordWithTitleBean>();
-        List<MonthlyAggregatedRecordBean> plannedStats = new ArrayList<MonthlyAggregatedRecordBean>();
+        List<MonthlyAggregatedRecordWithTitleBean> burnedStats;
+        List<MonthlyAggregatedRecordBean> plannedStats;
         if (budgetFilter.getSelectedTags().isEmpty()) {
             // aggregate all budgets
             burnedStats = workRecordRepository.aggregateByMonthAndPersonForBudgets(budgetFilter.getProjectId(), startDate);
@@ -624,8 +624,8 @@ public class StatisticsService {
      */
     public TargetAndActual getMonthStatsForBudgetsWithTax(BudgetTagFilter budgetFilter, int numberOfMonths) { //multi month
         Date startDate = dateUtil.monthsAgo(numberOfMonths);
-        List<MonthlyAggregatedRecordWithTitleAndTaxBean> burnedStats = new ArrayList<MonthlyAggregatedRecordWithTitleAndTaxBean>();
-        List<MonthlyAggregatedRecordWithTaxBean> plannedStats = new ArrayList<MonthlyAggregatedRecordWithTaxBean>();
+        List<MonthlyAggregatedRecordWithTitleAndTaxBean> burnedStats;
+        List<MonthlyAggregatedRecordWithTaxBean> plannedStats;
         if (budgetFilter.getSelectedTags().isEmpty()) {
             // aggregate all budgets
             burnedStats = workRecordRepository.aggregateByMonthAndPersonForBudgetsWithTax(budgetFilter.getProjectId(), startDate);
@@ -655,8 +655,8 @@ public class StatisticsService {
         targetSeries.setName("Target");
 
         Date startDate = dateUtil.monthsAgo(numberOfMonths);
-        List<Money> resultList = new ArrayList<Money>();
-        List<Money> resultList_gros = new ArrayList<Money>();
+        List<Money> resultList = new ArrayList<>();
+        List<Money> resultList_gros = new ArrayList<>();
 
         Calendar c = Calendar.getInstance();
         c.setTime(startDate);
@@ -765,7 +765,7 @@ public class StatisticsService {
     }
 
     public List<ContractStatisticBean> getMonthlyAggregatedStatisticsForContract(long contractId, int numberOfMonths) {
-        List<ContractStatisticBean> result = new LinkedList<ContractStatisticBean>();
+        List<ContractStatisticBean> result = new LinkedList<>();
         Date startDate = dateUtil.monthsAgo(numberOfMonths);
         Calendar cal = Calendar.getInstance();
         cal.setTime(startDate);
@@ -780,7 +780,7 @@ public class StatisticsService {
     }
 
     public List<ContractStatisticBean> getMonthlyStatisticsForContract(long contractId, Date startDate) {
-        List<ContractStatisticBean> result = new LinkedList<ContractStatisticBean>();
+        List<ContractStatisticBean> result = new LinkedList<>();
         Calendar cal = Calendar.getInstance();
         cal.setTime(startDate);
         Calendar currentDate = Calendar.getInstance();
